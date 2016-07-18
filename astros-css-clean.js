@@ -10,6 +10,10 @@ module.exports = new astro.Middleware({
         next(asset);
         return;
     }
-    asset.data = cleanCSS.minify(asset.data).styles;
+    try{
+        asset.data = cleanCSS.minify(asset.data).styles;
+    }catch(error){
+        console.error('astros-css-clean', '样式压缩异常', asset.info);
+    }
     next(asset);
 });

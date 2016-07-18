@@ -1,6 +1,6 @@
 {
   "name": "astros-css-clean",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "astros中间件。压缩css",
   "main": "astros-css-clean.js",
   "scripts": {
